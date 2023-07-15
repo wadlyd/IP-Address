@@ -1,38 +1,106 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+* {
+  padding: 0;
+  margin: auto;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  background-image: url('./images/pattern-bg-desktop.png');
+  background-repeat: no-repeat;
   min-height: 100vh;
+  font-family: 'Rubik', sans-serif;
+  background-size: cover;
+  @media (max-width: "375px") {
+    background-image: url('./images/pattern-bg-mobile.png');    
+  }
+}
+
+.searchBox {
+  width: 40%;
+  @media (min-width: 0px) and (max-width: 749px) {
+    width: 95%;
+  }
+  @media (min-width: 750px) and (max-width: 870px) {
+    width: 75%;
+  }
+}
+
+form {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+input {
+  width: 100%;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  padding: 1rem;
+  outline: none;
+  margin: 2rem 0;
+}
+
+button {
+  background-color: hsl(0, 0%, 17%);
+  border: none;
+  border-radius: 0 5px 5px 0;
+  padding: 7.4px;
+}
+
+.dataWrapper {
+  display: flex;
+  margin-top: 2rem;
+  width: 70%;
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 40px;
+  z-index: 2;
+  position: absolute;
+  left: calc(50% - 35.5%);
+  
+  @media (max-width: 870px) {
+    margin-top: 1rem;
+    display: block;
+    align-items: center;
+    text-align: center;
+    width: 75%;
+    left: calc(50% - 37.55%);
+  }
+  
+  @media (min-width: 0px) and (max-width: 749px) {
+    display: block;
+    align-items: center;
+    text-align: center;
+    margin-top: 2px;
+    width: 95%;
+    left: calc(50% - 47.5%);
+  }
+}
+
+p {
+  font-size: 10px;
+  font-weight: 700;
+  color: hsl(0, 0%, 59%);
+}
+
+h1 {
   color: white;
+  font-weight: 700;
+  padding-top: 2rem;
+  text-align: center;
+  font-size: 35px;
 }
 
-.App-link {
-  color: #61dafb;
+h3 {
+  padding-top: 10px;
+}
+.mapContainer {
+  width: 100%;
+  height: calc(100vh - 275px);
+  position: relative;
+  z-index: 1;
+  top: 90px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.dataWrapper > p {
+  width: 20%;
 }
