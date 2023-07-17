@@ -46,40 +46,28 @@ button {
   padding: 7.4px;
 }
 
-.dataWrapper {
-  display: flex;
-  margin-top: 2rem;
-  width: 70%;
+.dataWrapper{
   background-color: #ffffff;
-  border-radius: 5px;
-  padding: 40px;
+  padding: 20px;
   z-index: 2;
+  display: block;
+  border-radius: 15px;
+  width: 70%;
   position: absolute;
-  left: calc(50% - 35.5%);
-  
-  @media (max-width: 870px) {
-    margin-top: 1rem;
-    display: block;
-    align-items: center;
-    text-align: center;
-    width: 75%;
-    left: calc(50% - 37.55%);
-  }
-  
+  left: calc(50% - 37.5%);
+  text-align: center;
+
   @media (min-width: 0px) and (max-width: 749px) {
-    display: block;
-    align-items: center;
-    text-align: center;
+    padding: 20px 2px;
     margin-top: 2px;
     width: 95%;
-    left: calc(50% - 47.5%);
+    left: calc(50% - 48%);
   }
+
 }
 
-p {
-  font-size: 10px;
-  font-weight: 700;
-  color: hsl(0, 0%, 59%);
+.dataInfo {
+  padding-bottom: 1rem;
 }
 
 h1 {
@@ -90,17 +78,10 @@ h1 {
   font-size: 35px;
 }
 
-h3 {
-  padding-top: 10px;
-}
 .mapContainer {
   width: 100%;
   height: calc(100vh - 275px);
   position: relative;
   z-index: 1;
   top: 90px;
-}
-
-.dataWrapper > p {
-  width: 20%;
 }
